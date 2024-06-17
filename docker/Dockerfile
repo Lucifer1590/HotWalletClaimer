@@ -39,7 +39,7 @@ RUN chromedriver --version
 COPY docker/* /usr/src/app/
 COPY launch.sh /usr/src/app/
 
-RUN apt-get update && apt-get install -y 
+RUN apt-get update && apt-get install -y \
     snapd curl wget python3 python3-pip libzbar0 unzip python3-venv gdebi-core  && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
